@@ -1,4 +1,4 @@
-1. Given String revese the each word in the Sentence.
+## 1. Given String revese the each word in the Sentence.
 
 Answer:
 function wordsReverser(string){
@@ -8,7 +8,7 @@ function wordsReverser(string){
 }
 console.log(wordsReverser('Welcome To Techaly Tutorial'));
 
-2. Binary search using recursion,Sample array=[0,1,2,3,4,5,6].what is output?
+## 2. Binary search using recursion,Sample array=[0,1,2,3,4,5,6].what is output?
 
 Answer:- 
 Array.prototype.br_search = function (target) 
@@ -32,13 +32,13 @@ l= [0,1,2,3,4,5,6];
 
 console.log(l.br_search(5));
 
-3. Console.log(1>2>3)
+## 3. Console.log(1>2>3)
     Console.log(1<2<3) what is out of this.
 
 Answer: false
 True
 
-4. How would you use a closure to create a private counter?
+## 4. How would you use a closure to create a private counter?
 
 Answer:-  
 function counter() {
@@ -62,7 +62,7 @@ c.add(4);
 // now we can access the private variable in the following way
 c.retrieve(); // => The counter is currently at: 10
 
-5. What will the following code output?
+## 5. What will the following code output?
 
 (function() {
   var a = b = 5;
@@ -72,7 +72,7 @@ console.log(b);
 
 Answer:-  5
 
-6. enqueue and dequeue using only two stacks
+## 6. enqueue and dequeue using only two stacks
 
 Answer:-
 var firststackInput = []; // First stack
