@@ -1,0 +1,98 @@
+1. Given String revese the each word in the Sentence.
+
+Answer:
+function wordsReverser(string){
+    return string.split(' ').map(function(word) { 
+        return word.split('').reverse().join(''); 
+    }).join(' ');
+}
+console.log(wordsReverser('Welcome To Techaly Tutorial'));
+
+2. Binary search using recursion,Sample array=[0,1,2,3,4,5,6].what is output?
+
+Answer:- 
+Array.prototype.br_search = function (target) 
+{
+  var half = parseInt(this.length / 2);
+  if (target === this[half]) 
+  {
+    return half;
+  }
+  if (target > this[half]) 
+  {
+    return half + this.slice(half,this.length).br_search(target);
+  } 
+  else
+  {
+    return this.slice(0, half).br_search(target);
+  }
+};
+
+l= [0,1,2,3,4,5,6];
+
+console.log(l.br_search(5));
+
+3. Console.log(1>2>3)
+    Console.log(1<2<3) what is out of this.
+
+Answer: false
+True
+
+4. How would you use a closure to create a private counter?
+
+Answer:-  
+function counter() {
+   var _counter = 0;
+  // return an object with several functions that allow you
+  // to modify the private _counter variable
+  return {
+    add: function(increment) { _counter += increment; },
+    retrieve: function() { return 'The counter is currently at: ' + _counter; }
+  }
+}
+
+// error if we try to access the private variable like below
+// _counter;
+
+// usage of our counter function
+var c = counter();
+c.add(6); 
+c.add(4); 
+
+// now we can access the private variable in the following way
+c.retrieve(); // => The counter is currently at: 10
+
+5. What will the following code output?
+
+(function() {
+  var a = b = 5;
+})();
+
+console.log(b);
+
+Answer:-  5
+
+6. enqueue and dequeue using only two stacks
+
+Answer:-
+var firststackInput = []; // First stack
+var secondstackOutput = []; // Second stack
+
+// For enqueue, just push the item into the first stack
+function enqueue(firststackInput, item) {
+  return firststackInput.push(item);
+}
+
+function dequeue(firststackInput, secondstackOutput) {
+  // Reverse the stack such that the first element of the output stack is the
+  // last element of the input stack. After that, pop the top of the output to
+  // get the first element that was ever pushed into the input stack
+  if (secondstackOutput.length <= 0) {
+    while(firststackInput.length > 0) {
+      var elementToOutput = firststackInput.pop();
+     secondstackOutput.push(elementToOutput);
+    }
+  }
+
+  return stackOutput.pop();
+}
